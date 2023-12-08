@@ -7,9 +7,10 @@ public class PlayerControllerX : MonoBehaviour
     public bool gameOver = false;
 
     public float jumpForce;
-    private float gravityModifier = 1.5f;
+    private float gravityModifer = 1.5f;
     private Rigidbody playerRb;
 
+    private Animator playerAnim;
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
 
@@ -21,11 +22,11 @@ public class PlayerControllerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Physics.gravity *= gravityModifier;
+        playerRb = GetComponent<Rigidbody>();
+        Physics.gravity *= gravityModifer;
+        playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
-
         // Apply a small upward force at the start of the game
-        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
 
     }
 
