@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
            dirtParticle.Stop();
            playerAudio.PlayOneShot(jumpSound, 1.0f);
        }
+       //else if ( )
+     //  {
+
+      // }
    }
    private void OnCollisionEnter(Collision collision)
    {
