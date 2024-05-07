@@ -51,10 +51,10 @@ public class PlayerController : MonoBehaviour
            playerAudio.PlayOneShot(jumpSound, 1.0f);
            canDoubleJump = false;
        }
-       else if (Input.GetKeyDown(KeyCode.LeftShift) )
-       {
-
-       }
+       // if (Input.GetKeyDown(KeyCode.LeftShift) )
+       //{
+       //onDash = true; 
+      // }
    }
    private void OnCollisionEnter(Collision collision)
    {
