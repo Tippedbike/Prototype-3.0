@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
   public bool isOnGround = true;
   public bool gameOver = false;
   private bool canDoubleJump = false; 
-  public bool onDash = false; 
+  public bool canDash = false; 
   
   private Animator playerAnim;
   public ParticleSystem explosionParticles;
@@ -51,10 +51,14 @@ public class PlayerController : MonoBehaviour
            playerAudio.PlayOneShot(jumpSound, 1.0f);
            canDoubleJump = false;
        }
-       // if (Input.GetKeyDown(KeyCode.LeftShift) )
-       //{
-       //onDash = true; 
-      // }
+        if (Input.GetKey(KeyCode.LeftShift) )
+       {
+        canDash = true; 
+       }
+       else 
+       {
+        canDash = false; 
+       }
    }
    private void OnCollisionEnter(Collision collision)
    {
