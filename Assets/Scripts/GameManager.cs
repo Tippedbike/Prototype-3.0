@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         {
             if(playerControllerScript.canDash)
             {
-                score += 2;
+                score += 1;
             }
             else
             {
