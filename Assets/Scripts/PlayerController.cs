@@ -54,10 +54,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) )
        {
         canDash = true; 
+        playerAnim.SetFloat("Speed_multiplier", 2.0f);
        }
-       else 
+       else if (canDash)
        {
         canDash = false; 
+         playerAnim.SetFloat("Speed_multiplier", 1.0f);
        }
    }
    private void OnCollisionEnter(Collision collision)
